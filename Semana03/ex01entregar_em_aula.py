@@ -37,22 +37,18 @@ def remover_aluno(lista, nome):
 
         if aux.nome == nome:
             if aux.proximo == aux.anterior == None:
-                print("Único elemento na lista")
                 return None
             
             elif aux.anterior == None:
-                print("Primeiro elemento da lista")
                 lista = aux.proximo
                 lista.anterior = None
                 return lista
             
             elif aux.proximo == None:
-                print("Último elemento da lista")
                 aux.anterior.proximo = None
                 return lista
 
             else:
-                print("Elemento no meio da lista")
                 aux.anterior.proximo = aux.proximo
                 aux.proximo.anterior = aux.anterior
                 return lista
@@ -60,7 +56,7 @@ def remover_aluno(lista, nome):
         else:
             aux = aux.proximo
     
-    print("Elemento não encontrado")
+    print("Aluno não encontrado")
     return lista
 
 def mostrar_situacao(lista):
